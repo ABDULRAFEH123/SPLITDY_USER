@@ -18,6 +18,8 @@ export default function MakePlan({ accomodate }) {
     dispatch(getAccomodation());
   }, [dispatch]);
 
+
+  
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-auto mt-16">
