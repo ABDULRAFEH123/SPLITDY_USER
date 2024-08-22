@@ -9,6 +9,7 @@ import Header from "@/components/common/Header";
 import ThingsToDoHeroSection from "@/components/thingstodopage/ThingsToDoHeroSection";
 import ThingstodoTxtSection from "@/components/thingstodopage/ThingstodoTxtSection";
 import SocialMedia from "@/components/common/SocialMedia";
+import Signup from "@/components/common/Signup";
 export default function Page() {
     return (
         <div className="flex flex-col overflow-hidden">
@@ -22,6 +23,7 @@ export default function Page() {
             <CardSection4 />
             <SocialMedia/>
             <Footer />
+            <Signup/>
         </div>
     );
 }
