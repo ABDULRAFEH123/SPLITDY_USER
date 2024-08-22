@@ -1,5 +1,5 @@
 "use client"
-import { ImageList, ImageListItem } from "@material-ui/core";
+// import { ImageList, ImageListItem } from "@material-ui/core";
 import Image from "next/image";
 import { PiArrowRightThin } from "react-icons/pi";
 import Gallery1 from "@/assets/place1.webp";
@@ -7,8 +7,8 @@ import Gallery2 from "@/assets/place2.webp";
 import Gallery3 from "@/assets/place3.webp";
 import Gallery4 from "@/assets/place4.webp";
 import Gallery5 from "@/assets/place5.webp";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
+// import { useTheme } from "@material-ui/core/styles";
 import DynamicText from "../common/DynamicText";
 
 export default function TopPlacesToVisit() {

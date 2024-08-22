@@ -1,5 +1,5 @@
 "use client"
-import { ImageList, ImageListItem } from "@material-ui/core";
+// import { ImageList, ImageListItem } from "@material-ui/core";
 import Image from "next/image";
 import Gallery1 from "@/assets/Geopark.webp";
 import Gallery2 from "@/assets/FoodDrink.webp";
