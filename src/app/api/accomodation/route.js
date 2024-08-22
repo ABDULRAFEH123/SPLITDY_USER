@@ -1,13 +1,13 @@
-import dbConnect from "../../../lib/dbConnect";
-import { Accommodation } from "../../../lib/models/allShemas";
 import { NextResponse } from "next/server";
+import { db } from "../../../lib/db/db"; // Import Prisma client from your db.js file
 
 export async function GET(req, res) {
-  await dbConnect();
-
   try {
-    const accommodations = await Accommodation.find({});
-    // console.log(accommodations, "Fetched accommodations");
+    console.log("Connecting to database...");
+    console.log("Database connected.");
+
+    const accommodations = await db.accommodation.findMany(); // Fetch all accommodations using Prisma
+    console.log(accommodations, "Fetched accommodations");
 
     return NextResponse.json(accommodations, { status: 200 });
   } catch (error) {
