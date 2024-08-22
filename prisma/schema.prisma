@@ -1,0 +1,88 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+generator client {
+  provider = "prisma-client-js"
+}
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  username  String?  @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Accommodation {
+  id                   String                @id @default(auto()) @map("_id") @db.ObjectId
+  title                String
+  description          String
+  about                String
+  rating               Float?                // For numeric values
+  prices               Price[]               // Embedded prices
+  ageRestrictions      AgeRestriction[]      // Embedded age restrictions
+  termsConditions      TermsCondition[]      // Embedded terms and conditions
+  cancellationPolicies CancellationPolicy[]  // Embedded cancellation policies
+  openingTimes         OpeningTime[]         // Embedded opening times
+  images               Image[]               // Embedded images (array of objects)
+  locations            Location[]            // Embedded locations (array of objects)
+  accomodatiotype      String?
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+}
+model Itinerary {
+  id                   String                @id @default(auto()) @map("_id") @db.ObjectId
+  title                String
+  description          String
+  about                String
+  rating               Float?                // For numeric values
+  prices               Price[]               // Embedded prices
+  ageRestrictions      AgeRestriction[]      // Embedded age restrictions
+  termsConditions      TermsCondition[]      // Embedded terms and conditions
+  cancellationPolicies CancellationPolicy[]  // Embedded cancellation policies
+  openingTimes         OpeningTime[]         // Embedded opening times
+  images               Image[]               // Embedded images (array of objects)
+  locations            Location[]            // Embedded locations (array of objects)
+  categories           String?
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+}
+// Embedded models without @id or @map("_id") annotations
+type Price {
+  category String
+  name     String
+  value    String
+}
+type AgeRestriction {
+  description String
+}
+type TermsCondition {
+  description String
+}
+type CancellationPolicy {
+  description String
+}
+type OpeningTime {
+  openingTime  String
+  closingTime  String
+  month        String
+}
+type Image {
+  url         String
+}
+type Location {
+  lat     Float?
+  lng     Float?
+}
+model AccommodationType {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Category {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
