@@ -19,6 +19,8 @@ export default function MakePlan({ accomodate }) {
   }, [dispatch]);
 
 
+
+
   
   return (
     <div>
