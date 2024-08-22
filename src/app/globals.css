@@ -1,0 +1,236 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* components/StyledHeading.module.css */
+.boldHeadings {
+  font-family: sans-serif;
+  font-weight: bold;
+
+  margin-top: 4rem;
+  /* mt-16 in Tailwind */
+  margin-bottom: 1.5rem;
+  /* my-6 in Tailwind */
+  font-size: 1.875rem;
+  /* Tailwind's text-3xl */
+}
+
+@media screen and (min-width: 768px) {
+  .boldHeadings {
+    font-size: 2.25rem;
+    /* Tailwind's text-5xl */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .boldHeadings {
+    font-size: 3rem;
+    /* Tailwind's text-5xl */
+  }
+}
+
+.setCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+
+}
+
+
+.gallerySection {
+  height: 436px !important;
+  width: max-content !important;
+}
+
+.gallery {
+  height: 318px !important;
+  width: max-content !important;
+}
+
+.gallery-new {
+  height: 318px !important;
+}
+
+
+.tags-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tags-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.footer-logo {
+  gap: 1;
+}
+
+@media screen and (min-width:1025px) {
+
+  .footer-logo {
+    gap: 0 !important;
+  }
+}
+
+
+
+/* Custom styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button.left {
+  left: 16px;
+}
+
+.carousel-button.right {
+  right: 16px;
+}
+
+.carousel-button svg {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+@media screen and (min-width:1840px) {
+
+  .options {
+    position: absolute !important;
+    right: 300px !important;
+  }
+}
+
+@media screen and (min-width:2240px) {
+
+  .options {
+    position: absolute !important;
+    right: 380px !important;
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  .YouAreHere {
+    width: 55% !important;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+  .YouAreHere {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width:1410px) {
+
+  .YouAreHere {
+    width: 73% !important;
+  }
+}
+@media screen and (min-width:1600px) {
+
+  .YouAreHere {
+    width: 68% !important;
+  }
+}
+@media screen and (min-width:1725px) {
+
+  .YouAreHere {
+    width: 62% !important;
+  }
+}
+
+@media screen and (min-width:1900px) {
+
+  .YouAreHere {
+    width: 57%!important;
+  }
+}
+
+@media screen and (min-width:2070px) {
+
+  .YouAreHere {
+    width: 52% !important;
+  }
+}
+@media screen and (min-width:2210px) {
+
+  .YouAreHere {
+    width: 48% !important;
+  }
+}
+@media screen and (min-width:2400px) {
+
+  .YouAreHere {
+    width: 42% !important;
+  }
+}
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 300px); /* Adjust height as needed */
+  gap: 4px;
+}
+
+.masonryItem {
+  break-inside: avoid;
+  height: 300px !important;
+
+  
+}
+
+.mask {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #00951b; /* Green border color */
+  background-color: #e0e0e0; /* Light grey for unfilled parts */
+}
+
+.mask .fill {
+  clip: rect(0px, 18px, 18px, 0px);
+  background-color: #00951b; /* Green color for filled parts */
+  width: 18px;
+  height: 18px;
+  position: absolute;
+}
+
+
+/* @media(min-width:320px) and (max-width:500px){
+  .accomodation_media{
+    position: absolute;
+    top: -3px !important;
+  }
+} */
