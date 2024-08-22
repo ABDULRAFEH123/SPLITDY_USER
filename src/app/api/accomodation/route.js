@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "../../../lib/db/db"; // Import Prisma client from your db.js file
 
-export async function GET(req, res) {
+export async function POST(req, res) {
   try {
     console.log("Connecting to database...");
     console.log("Database connected.");

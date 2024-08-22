@@ -23,7 +23,7 @@ export const getAccomodation = createAsyncThunk(
   "itinerary/getAccomodation",
   async (_, thunkAPI) => {
     try {
-      const { data, status } = await axiosInstance.get("/api/accomodation");
+      const { data, status } = await axiosInstance.post("/api/accomodation");
       if (status === 200) {
         return data;
       } else {
