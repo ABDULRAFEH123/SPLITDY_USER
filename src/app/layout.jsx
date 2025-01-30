@@ -26,26 +26,33 @@ const archivo = Archivo({
 export default async function RootLayout({ children }) {
   return (
     <Providers>
-    <html lang="en">
-
-      <body className={cn("", archivo.className)}>
-        <Toaster position="top-center" reverseOrder={false} />
-        <NextTopLoader
-          color="#00951b"
-          initialPosition={0.08}
-          crawlSpeed={400}
-          height={3}
-          crawl={true}
-          showSpinner={false}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #2299DD,0 0 5px #2299DD" />
-        <div className="  flex justify-center items-center ">
-          {children}
-        </div>
-
-      </body>
-    </html>
-     </Providers>
+      <html lang="en">
+        <head>
+          <meta name="google-adsense-account" content="ca-pub-4024487540954192" />
+          <script 
+            async 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4024487540954192"
+            crossorigin="anonymous"
+          />
+        </head>
+        <body className={cn("", archivo.className)}>
+          <Toaster position="top-center" reverseOrder={false} />
+          <NextTopLoader
+            color="#00951b"
+            initialPosition={0.08}
+            crawlSpeed={400}
+            height={3}
+            crawl={true}
+            showSpinner={false}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #2299DD,0 0 5px #2299DD" 
+          />
+          <div className="flex justify-center items-center">
+            {children}
+          </div>
+        </body>
+      </html>
+    </Providers>
   );
 }
